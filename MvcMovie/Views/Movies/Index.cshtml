@@ -11,11 +11,11 @@
 
     @using (Html.BeginForm("Index", "Movies", FormMethod.Get))
     {
-    <p>
+    <div class="gap-2 mb-2">
         Genre: @Html.DropDownList("movieGenre", "All")
         Title: @Html.TextBox("SearchString") <br />
-        <input value="Search" class="form-control" type="submit"/>
-    </p>
+        <input value="Search" class="form-control btn btn-dark mt-2" type="submit"/>
+    </div>
     }
     
     <table class="table table-striped">
