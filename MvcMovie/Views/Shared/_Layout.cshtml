@@ -8,7 +8,7 @@
     @Scripts.Render("~/bundles/modernizr")
 </head>
 <body>
-    <div class="navbar navbar-inverse navbar-fixed-top">
+    <!--<div class="navbar navbar-inverse navbar-fixed-top">
         <div class="container">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -25,7 +25,25 @@
                 </ul>
             </div>
         </div>
-    </div>
+    </div>-->
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+            @Html.ActionLink("MVC Movie App", "Index", "Movies", new { area = "" }, new { @class = "navbar-brand" })
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        @Html.ActionLink("Movies", "Index", null, new { @class = "nav-link active" })
+                    </li>
+                    <li class="nav-item">   
+                        @Html.ActionLink("Add New", "Create",null, new { @class = "nav-link" })
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
     <div class="container body-content">
         @RenderBody()
         <hr />
